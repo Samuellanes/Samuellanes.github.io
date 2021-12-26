@@ -11,13 +11,10 @@
      <h1>Imagem flexível</h1>
      <P>Você está vendo a imagem completa? Experimente ampliar o tamanho da<br>
     sua janela para aproveitar a melhor experiência.</P>
-    <img src="imagens/paisagem-p.png" alt="Imagem pequena">
-    <img src="imagens/paisagem-m.png" alt="Imagem media">
-    <img src="imagens/paisagem-g.png" alt="Imagem grande">
     <picture>
-        <source media="(max-width:500px)" srcset="../../d007/imagens/paisagem-p.png">
+        <img src="imagens/paisagem-g.png" alt="Imagem grande">   
+        <source media="(min-width:370px)" srcset="../../d007/imagens/paisagem-p.png">
         <source media="(max-width:1000px)" srcset="../../d007/imagens/paisagem-m.png">
-        <img src="../../d007/imagens/paisagem-g.png" alt="Imagem grande">
     </picture>
 
 </body>
