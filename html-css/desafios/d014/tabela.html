@@ -13,6 +13,7 @@
         table{
             border-collapse: collapse;
             width: 300px;
+            
         }
 
         th, td{
@@ -20,14 +21,18 @@
             padding: 10px;
         }
 
-        thead > tr > th{
-            background-color: rgba(128, 128, 128, 0.856);
+        thead{
+           background-color: gray;
             color: white;
         }
 
-        tbody > th > td{
+        .cinza{
             background-color: gray;
+            color: white;
+            text-align: left;
         }
+    
+
 
        
     </style>
@@ -36,15 +41,19 @@
 <table>
     <thead>
         <tr>
-            <th>Área</th>
-            <th>Disciplinas</th>
-            <th>Notas</th>
-            <th colspan="2">Média</th>
+            <th rowspan="2" scope="rowgroup">Área</th>
+            <th rowspan="2" scope="rowgroup">Disciplinas</th>
+            <th colspan="2" scope="colgroup">Notas</th>
+            <th rowspan="2" scope="rowgroup">Média</th>
+        </tr>
+        <tr>
+            <th>nota 1</th>
+            <th>nota 2</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th rowspan="4">Exatas</th>
+            <th rowspan="4" scope="rowgroup">Exatas</th>
             <td>Matemática</td>
             <td>0.0</td>
             <td>0.0</td>
@@ -69,11 +78,11 @@
             <td>0.0</td>
         </tr>
         <tr>
-            <th colspan="4">Media das Extras</th>
-            <td>0.0</td>
+            <th colspan="4" class="cinza" scope="colgroup">Media das Extras</th>
+            <td class="cinza">0.0</td>
         </tr>
         <tr>
-            <th rowspan="2">Humanas</th>
+            <th rowspan="2" scope="rowgroup">Humanas</th>
             <td>História</td>
             <td>0.0</td>
             <td>0.0</td>
@@ -86,8 +95,8 @@
             <td>0.0</td>
         </tr>
         <tr>
-            <th colspan="4">Media de Humanas</th>
-            <td>0.0</td>
+            <th colspan="4" class="cinza" scope="colgroup">Media de Humanas</th>
+            <td class="cinza">0.0</td>
         </tr>
     </tbody>
 </table>
